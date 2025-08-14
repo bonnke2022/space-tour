@@ -3,7 +3,6 @@ import Logo from "@/assets/shared/logo.svg";
 import { NavLink, navlinks } from "@/lib/links";
 import Image from "next/image";
 import Hamburger from "@/assets/shared/icon-hamburger.svg";
-import Close from "@/assets/shared/icon-close.svg";
 import Link from "next/link";
 import {
   Sheet,
@@ -74,11 +73,11 @@ const Navbar = () => {
           />
         </SheetTrigger>
         <SheetContent
-          className="bg-white/5 backdrop-blur-[2rem]"
+          className="bg-white/5 backdrop-blur-[2rem] p-4 flex flex-col gap-8 items-center lg:hidden"
           aria-describedby={undefined}
         >
           <SheetTitle>
-            <SheetClose className="cursor-pointer">
+            {/* <SheetClose className="cursor-pointer self-end">
               <Image
                 src={Close}
                 alt="close"
@@ -89,9 +88,9 @@ const Navbar = () => {
                 priority={false}
                 loading="lazy"
               />
-            </SheetClose>
+            </SheetClose> */}
           </SheetTitle>
-          <ul className="primary-navigation right-indicators flex flex-col space-y-4">
+          <ul className="primary-navigation right-indicators flex flex-col space-y-8 mt-12">
             {navlinks.map((link: NavLink) => {
               return (
                 <li key={link.id}>
